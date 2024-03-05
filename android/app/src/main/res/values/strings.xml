@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyReactNativeApp</string>
+    <string name="CodePushDeploymentKey">"Your-CodePush-Deployment-Key-Here"</string>
 </resources>
