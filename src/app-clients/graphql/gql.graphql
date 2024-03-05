@@ -1,0 +1,56 @@
+query Product(
+  $filter: ProductAttributeFilterInput
+  $pageSize: Int
+  $currentPage: Int
+  $sort: ProductAttributeSortInput
+  $products_collection_type: String
+  $search: String
+) {
+  products(
+    filter: $filter
+    pageSize: $pageSize
+    currentPage: $currentPage
+    sort: $sort
+    products_collection_type: $products_collection_type
+    search: $search
+  ) {
+    aggregations {
+      attribute_code
+      label
+      options {
+        label
+        value
+        count
+      }
+      count
+      position
+    }
+    items {
+      name
+      sku
+      price_range {
+        minimum_price {
+          regular_price {
+            value
+            currency
+          }
+          final_price {
+            value
+            currency
+          }
+          discount {
+            amount_off
+            percent_off
+          }
+        }
+      }
+      image {
+        url
+      }
+    }
+    page_info {
+      page_size
+      current_page
+    }
+  }
+}

@@ -1,0 +1,17 @@
+# query
+query GetListUsedCoupons {
+  getListUsedCoupons
+    @rest(
+      type: "getListUsedCoupons"
+      method: GET
+      path: "rest/V1/carts/mine/coupons"
+    )
+}
+# mutation
+mutation RegisterApp($input: InputRegister) {
+  registerApp(input: $input)
+    @rest(type: "registerApp", method: POST, path: "rest/V1/customers") {
+    status
+    messenger
+  }
+}

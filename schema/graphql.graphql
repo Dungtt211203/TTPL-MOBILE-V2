@@ -1,0 +1,81 @@
+type Query {
+  products(
+    filter: ProductAttributeFilterInput
+    pageSize: Int
+    currentPage: Int
+    sort: ProductAttributeSortInput
+    products_collection_type: String
+    search:String
+  ): TypeProductRes
+}
+
+input ProductAttributeFilterInput {
+  category_id: FilterEqualTypeInput
+}
+
+input FilterEqualTypeInput {
+  eq:String
+  in:[String]
+}
+
+input ProductAttributeSortInput {
+  name: SortEnum
+}
+
+enum SortEnum {
+  DESC
+  ASC
+}
+
+# type ResProduct {
+#   data: ResProductData
+# }
+# type ResProductData {
+#   product: TypeProductRes
+# }
+type TypeProductRes {
+  aggregations: [TypeAggregationsRes]
+  items: [TypeItemsRes]
+  page_info: TypePageInfoRes
+}
+type TypeAggregationsRes {
+  attribute_code: String
+  label: String
+  options: [TypeOptionRes]
+  count: Int
+  position: String
+}
+type TypeOptionRes {
+  label: String
+  value: String
+  count: Int
+}
+type TypeItemsRes {
+  name: String
+  sku: String
+  price_range: TypePriceRangeRes
+  image: TypeImageRes
+}
+type TypePriceRangeRes {
+  minimum_price: TypeMinimumPriceRes
+}
+type TypeMinimumPriceRes {
+  regular_price: TypePriceRes
+  final_price: TypePriceRes
+  discount: TypeDiscountRes
+}
+type TypePriceRes {
+  value: Int
+  currency: String
+}
+type TypeDiscountRes {
+  amount_off: Int
+  percent_off: Int
+}
+type TypeImageRes {
+  url: String
+}
+type TypePageInfoRes {
+  page_size: Int
+  current_page: Int
+}

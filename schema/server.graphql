@@ -1,0 +1,19 @@
+scalar Upload
+
+type Query {
+  getListUsedCoupons: String
+}
+
+type Mutation {
+  registerApp(input: InputRegister): ResRegister
+}
+
+input InputRegister {
+  customer: InputCustomer
+  password: String
+}
+
+type ResRegister {
+  status: Boolean
+  messenger: String
+}

@@ -1,0 +1,148 @@
+type Query {
+  getRealmUserInfo(isPass: Boolean): ResRealmUserInfo
+}
+
+type Mutation {
+  addRealmUserInfo(variable: InputRealmAddUserInfo!): Boolean!
+  addRealmProduct(variable: InputAddRealmProduct!): Boolean!
+}
+
+input InputAddRealmProduct {
+  data_product_sellings: [TypeDataProduct]
+  data_product_promotion: [TypeDataProduct]
+  data_product_suggestions: [TypeDataProduct]
+}
+
+input TypeDataProduct {
+  special_price: String
+  product_id: String
+  name: String
+  category: String
+  created_at: String
+  qty: String
+  main_image: String
+  small_image: String
+  gallery: String
+  sku: String
+  color: String
+  size: String
+  price: String
+  instock: String
+  whole_sale: String
+  description: String
+  short_description: String
+  child_product: String
+  group_id: String
+  ecial_price: String
+  final_price: String
+  max_regular_amount: String
+  min_regular_amount: String
+  widget_id: String
+  language: String
+}
+
+input InputRealmAddUserInfo {
+  email: String!
+  token: String
+  type_login: ThirdParty
+  password: String
+  avatar: String
+  background_image: String
+  customer_info: InputCustomerInfo
+}
+
+input InputCustomerInfo {
+  entity_id: String
+  website_id: String
+  email: String
+  group_id: String
+  increment_id: String
+  store_id: String
+  created_at: String
+  updated_at: String
+  is_active: String
+  disable_auto_group_change: String
+  created_in: String
+  prefix: String
+  firstname: String
+  middlename: String
+  lastname: String
+  suffix: String
+  dob: String
+  password_hash: String
+  rp_token: String
+  rp_token_created_at: String
+  default_billing: String
+  default_shipping: String
+  taxvat: String
+  confirmation: String
+  gender: String
+  failures_num: String
+  first_failure: String
+  lock_expires: String
+  session_cutoff: String
+  address: String
+  avatar: String
+  orders: String
+  total_number_of_completed_orders: String
+  total_number_of_unfinished_orders: String
+  total_number_of_returned_orders: String
+  total_amount_paid: String
+  total_amount_owed: String
+}
+
+type ResRealmUserInfo {
+  email: String
+  token: String
+  password: String
+  type_login: String
+  avatar: String
+  background_image: String
+  customer_info: ResCustomerInfo
+}
+
+type ResCustomerInfo {
+  entity_id: String
+  website_id: String
+  email: String
+  group_id: String
+  increment_id: String
+  store_id: String
+  created_at: String
+  updated_at: String
+  is_active: String
+  disable_auto_group_change: String
+  created_in: String
+  prefix: String
+  firstname: String
+  middlename: String
+  lastname: String
+  suffix: String
+  dob: String
+  password_hash: String
+  rp_token: String
+  rp_token_created_at: String
+  default_billing: String
+  default_shipping: String
+  taxvat: String
+  confirmation: String
+  gender: String
+  failures_num: String
+  first_failure: String
+  lock_expires: String
+  session_cutoff: String
+  address: String
+  avatar: String
+  orders: String
+  total_number_of_completed_orders: String
+  total_number_of_unfinished_orders: String
+  total_number_of_returned_orders: String
+  total_amount_paid: String
+  total_amount_owed: String
+}
+
+enum ThirdParty {
+  google
+  facebook
+  apple
+}

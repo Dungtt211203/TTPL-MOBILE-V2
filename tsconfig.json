@@ -1,0 +1,157 @@
+// prettier-ignore
+{
+  "extends": "@tsconfig/react-native/tsconfig.json", /* Recommended React Native TSConfig base */
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    /* Completeness */
+    "skipLibCheck": true, /* Skip type checking all .d.ts files. */
+    "types": [
+      "jest",
+      "node"
+    ],
+    "importHelpers": true,
+    "target": "es6",
+    "module": "esnext",
+    "jsx": "react-native",
+    "noEmit": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "noImplicitThis": false,
+    "allowJs": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2016",
+      "esnext",
+      "es2015"
+    ],
+    "paths": {
+      "native-base": [
+        "./node_custom/native-base/src"
+      ],
+      "native-base/*": [
+        "./node_custom/native-base/src/*"
+      ],
+      "@i18n": [
+        "./i18n"
+      ],
+      "@i18n/*": [
+        "./i18n/*"
+      ],
+      "@assets": [
+        "./src/assets"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@app-views": [
+        "./src/app-views"
+      ],
+      "@app-views/*": [
+        "./src/app-views/*"
+      ],
+      "@app-navigation": [
+        "./src/app-navigation"
+      ],
+      "@app-navigation/*": [
+        "./src/app-navigation/*"
+      ],
+      "@app-helper": [
+        "./src/app-helper"
+      ],
+      "@app-helper/*": [
+        "./src/app-helper/*"
+      ],
+      "@app-services": [
+        "./src/app-services"
+      ],
+      "@app-services/*": [
+        "./src/app-services/*"
+      ],
+      "@app-uikits": [
+        "./src/app-uikits"
+      ],
+      "@app-uikits/*": [
+        "./src/app-uikits/*"
+      ],
+      "@app-components": [
+        "./src/app-components"
+      ],
+      "@app-components/*": [
+        "./src/app-components/*"
+      ],
+      "@app-database": [
+        "src/app-database"
+      ],
+      "@app-database/*": [
+        "src/app-database/*"
+      ],
+      "@app-clients": [
+        "./src/app-clients"
+      ],
+      "@app-clients/*": [
+        "./src/app-clients/*"
+      ],
+      "@app-schemas": [
+        "./src/app-schemas/"
+      ],
+      "@app-schemas/*": [
+        "./src/app-schemas/*"
+      ],
+      "@app-hooks": [
+        "./src/app-hooks"
+      ],
+      "@app-hooks/*": [
+        "./src/app-hooks/*"
+      ],
+      "@app-models": [
+        "./src/app-models"
+      ],
+      "@app-models/*": [
+        "./src/app-models/*"
+      ],
+      "@app-config": [
+        "./src/app-config"
+      ],
+      "@app-config/*": [
+        "./src/app-config/*"
+      ],
+      "@app-languages": [
+        "./src/app-languages"
+      ],
+      "@realm-db": [
+        "./src/realm-db"
+      ],
+      "@realm-db/*": [
+        "./src/realm-db/*"
+      ],
+      "react-native-swipeable": [
+        "./node_custom/react-native-swipeable"
+      ],
+      "react-native-progress": [
+        "./node_custom/react-native-progress"
+      ],
+      "react-native-progress/*": [
+        "./node_custom/react-native-progress/*"
+      ],
+    }
+  },
+  "include": [
+    "src/**/*",
+    "global.d.ts",
+    "node_custom/**/*",
+    "native_modules/**/*",
+    "index.js",
+    "i18n.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "jest.config.js"
+  ]
+}

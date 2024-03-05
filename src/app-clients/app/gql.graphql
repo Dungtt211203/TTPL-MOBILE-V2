@@ -1,0 +1,57 @@
+query GetRealmUserInfo($isPass: Boolean) {
+  query: getRealmUserInfo(isPass: $isPass) @client {
+    email
+    token
+    type_login
+    password
+    avatar
+    background_image
+    customer_info {
+      entity_id
+      website_id
+      email
+      group_id
+      increment_id
+      store_id
+      created_at
+      updated_at
+      is_active
+      disable_auto_group_change
+      created_in
+      prefix
+      firstname
+      middlename
+      lastname
+      suffix
+      dob
+      password_hash
+      rp_token
+      rp_token_created_at
+      default_billing
+      default_shipping
+      taxvat
+      confirmation
+      gender
+      failures_num
+      first_failure
+      lock_expires
+      session_cutoff
+      address
+      avatar
+      orders
+      total_number_of_completed_orders
+      total_number_of_unfinished_orders
+      total_number_of_returned_orders
+      total_amount_paid
+      total_amount_owed
+    }
+  }
+}
+
+mutation AddRealmUserInfo($variable: InputRealmAddUserInfo!) {
+  mutation: addRealmUserInfo(variable: $variable) @client
+}
+
+mutation AddRealmProduct($variable: InputAddRealmProduct!) {
+  mutation: addRealmProduct(variable: $variable) @client
+}

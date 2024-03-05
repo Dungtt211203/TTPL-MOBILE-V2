@@ -1,0 +1,67 @@
+{
+	"name": "native-base",
+	"version": "0.1.0",
+	"description": "Essential cross-platform UI components for React Native",
+	"main": "src/index.js",
+	"typings": "./index.d.ts",
+	"scripts": {
+		"compile": "rm -rf dist/* && babel . --out-dir dist --ignore node_modules,dist --source-maps ",
+		"lint": "eslint \"src/**/*.{js, json}\"",
+		"transpile": "npm run compile && cp src/basic/Icon/selection.json dist/src/basic/Icon/selection.json && cp src/basic/Icon/NBIcons.json dist/src/basic/Icon",
+		"flow": "flow"
+	},
+	"jest": {
+		"preset": "react-native",
+		"transformIgnorePatterns": [
+			"node_modules/(?!react-native|@shoutem|react-clone-referenced-element|@shoutem/theme)"
+		]
+	},
+	"keywords": [
+		"react-native",
+		"ios",
+		"android"
+	],
+	"repository": "https://github.com/tuannm2/native-base",
+	"author": "Tuan Nguyen <tuannm@chainverse.org> (https://github.com/tuannm2)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/tuannm2/native-base/issues"
+	},
+	"homepage": "https://github.com/tuannm2/native-base#readme",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	},
+	"peerDependencies": {
+		"react": "*",
+		"react-native": "*"
+	},
+	"dependencies": {
+		"@codler/react-native-keyboard-aware-scroll-view": "2.0.1",
+		"@react-native-aria/checkbox": "^0.2.3",
+		"@react-native-aria/focus": "^0.2.8",
+		"@react-native-aria/overlays": "^0.3.7",
+		"@react-native-aria/radio": "^0.2.5",
+		"@react-native-community/datetimepicker": "6.7.1",
+		"@react-native-picker/picker": "2.4.8",
+		"@react-stately/radio": "^3.8.2",
+		"@shoutem/theme": "^0.13.1",
+		"add": "^2.0.6",
+		"blueimp-md5": "^2.19.0",
+		"clamp": "^1.0.1",
+		"color": "^4.2.3",
+		"create-react-class": "^15.7.0",
+		"fs-extra": "^11.1.0",
+		"jest-react-native": "^18.0.0",
+		"lodash": "^4.17.21",
+		"opencollective-postinstall": "^2.0.3",
+		"print-message": "^3.0.1",
+		"prop-types": "^15.8.1",
+		"react-native-drawer": "2.5.1",
+		"react-native-easy-grid": "0.2.2",
+		"react-native-vector-icons": "9.2.0",
+		"react-timer-mixin": "^0.13.4",
+		"react-tween-state": "^0.1.5",
+		"tween-functions": "^1.2.0",
+		"yarn": "^1.22.19"
+	}
+}
