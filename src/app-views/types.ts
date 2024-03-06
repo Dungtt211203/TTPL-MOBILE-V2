@@ -1,4 +1,11 @@
-import {HomeScreenProps} from './HomeScreen/HomeScreen';
+import { HomeScreenProps } from './HomeScreen/HomeScreen';
+import { FormLoginProps } from './Login/FormLogin';
+import { LoginProps } from './Login/Login';
+import { SelectAccountProps } from './Login/SelectAccount';
+import { SelectBusinessProps } from './Login/SelectBussiness';
+import { ForgetPasswordProps } from './Register/ForgotPassword';
+import { ResetPasswordProps } from './Register/ResetPassword';
+import { SendOTPProps } from './Register/SendOTP';
 
 type TypeMainScreen = {
   NavigationDrawer: any;
@@ -13,12 +20,13 @@ type TypeTutorialScreen = {
 };
 
 type TypeLoginScreen = {
-  // Login: LoginProps;
-  // Register: RegisterProps;
-  // ForgetPassword: ForgetPasswordProps;
-  // ResetPassword: ResetPasswordProps;
-  // Verification: VerificationProps;
-  // NewPassword: NewPasswordProps;
+  Login: LoginProps;
+  FormLogin: FormLoginProps;
+  SelectAccount: SelectAccountProps;
+  SelectBusiness: SelectBusinessProps;
+  ForgetPassword: ForgetPasswordProps;
+  ResetPassword: ResetPasswordProps;
+  SendOTP: SendOTPProps;
 };
 
 type TypeDrawerScreen = {

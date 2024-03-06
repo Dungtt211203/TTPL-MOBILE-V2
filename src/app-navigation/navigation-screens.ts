@@ -5,23 +5,23 @@ import {
   TypeMainKeys,
   TypeTutorialKeys,
 } from '@app-views/types';
-import {DrawerNavigationOptions} from '@react-navigation/drawer';
-import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
+import { DrawerNavigationOptions } from '@react-navigation/drawer';
+import { NativeStackNavigationOptions } from '@react-navigation/native-stack';
 import React from 'react';
 
 export interface StackConfig<T extends 'Navigation' | 'Drawer' = 'Navigation'> {
   name: string;
   component: React.ComponentType<any>;
   options?: T extends 'Navigation'
-    ? NativeStackNavigationOptions
-    : DrawerNavigationOptions;
+  ? NativeStackNavigationOptions
+  : DrawerNavigationOptions;
   children?: undefined;
   getComponent?: undefined;
   key?: string | number | null | undefined;
   initialParams?: object | undefined;
   getId?:
-    | (({params}: {params: object | undefined}) => string | undefined)
-    | undefined;
+  | (({ params }: { params: object | undefined }) => string | undefined)
+  | undefined;
   listeners?: any;
 }
 
@@ -33,26 +33,31 @@ const LoginScreens: Record<TypeLoginKeys, StackConfig> = {
     name: 'Login',
     component: require('@app-views/Login/Login').default,
   },
-  // Register: {
-  //   name: 'Register',
-  //   component: require('@app-views/Register/Register').default,
-  // },
-  // NewPassword: {
-  //   name: 'NewPassword',
-  //   component: require('@app-views/Login/NewPassword').default,
-  // },
-  // ForgetPassword: {
-  //   name: 'ForgetPassword',
-  //   component: require('@app-views/Password/ForgetPassword').default,
-  // },
-  // ResetPassword: {
-  //   name: 'ResetPassword',
-  //   component: require('@app-views/Password/ResetPassword').default,
-  // },
-  // Verification: {
-  //   name: 'Verification',
-  //   component: require('@app-views/Verification/Verification').default,
-  // },
+  FormLogin: {
+    name: 'FormLogin',
+    component: require('@app-views/Login/FormLogin').default,
+  },
+  SelectAccount: {
+    name: 'SelectAccount',
+    component: require('@app-views/Login/SelectAccount').default,
+  },
+  SelectBusiness: {
+    name: 'SelectBusiness',
+    component: require('@app-views/Login/SelectBussiness').default,
+  },
+  // Register
+  ForgetPassword: {
+    name: 'ForgetPassword',
+    component: require('@app-views/Register/ForgotPassword').default,
+  },
+  ResetPassword: {
+    name: 'ResetPassword',
+    component: require('@app-views/Register/ResetPassword').default,
+  },
+  SendOTP: {
+    name: 'SendOTP',
+    component: require('@app-views/Register/SendOTP').default,
+  },
 };
 
 /**
@@ -99,6 +104,8 @@ const DrawerScreens: Record<TypeDrawerKeys, StackConfig<'Drawer'>> = {
   },
 };
 
+
+
 /**
  * Register All Screen
  */
@@ -121,4 +128,4 @@ const AppScreens: Record<TypeAppKeys, any> = {
   // },
 };
 
-export {AppScreens, DrawerScreens, MainScreens};
+export { AppScreens, DrawerScreens, MainScreens };

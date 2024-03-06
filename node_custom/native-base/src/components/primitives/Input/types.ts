@@ -14,8 +14,8 @@ import type { MutableRefObject, RefCallback } from 'react';
 
 export interface InterfaceInputProps
   extends PlatformProps<IInputProps>,
-    Omit<TextInputProps, 'textAlign'>,
-    StyledProps {
+  Omit<TextInputProps, 'textAlign'>,
+  StyledProps {
   /**
    * If true, the input will indicate an error.
    */
@@ -65,7 +65,7 @@ export interface InterfaceInputProps
   /**
    * If given, adds the provided element to the right of the input.
    */
-  InputRightElement?: JSX.Element | JSX.Element[];
+  InputRightElement?: JSX.Element | JSX.Element[true];
   /**
    * If given, adds the provided element to the right of the input.
    */
