@@ -6,13 +6,17 @@ import { SelectBusinessProps } from './Login/SelectBussiness';
 import { ForgetPasswordProps } from './Register/ForgotPassword';
 import { ResetPasswordProps } from './Register/ResetPassword';
 import { SendOTPProps } from './Register/SendOTP';
+import { BasicProps } from './Setting/Basic';
+import { ContantProps } from './Setting/Contant';
+import { MenuSettingProps } from './Setting/MenuSetting';
+import { ServerpackageProps } from './Setting/Serverpackage';
 
 type TypeMainScreen = {
   NavigationDrawer: any;
   BottomTabs: any;
   //client
   HomeScreen: HomeScreenProps;
-  // Modal
+  // Setting
 };
 
 type TypeTutorialScreen = {
@@ -27,6 +31,10 @@ type TypeLoginScreen = {
   ForgetPassword: ForgetPasswordProps;
   ResetPassword: ResetPasswordProps;
   SendOTP: SendOTPProps;
+  MenuSetting: MenuSettingProps;
+  Contant: ContantProps;
+  Basic: BasicProps;
+  Serverpackage: ServerpackageProps;
 };
 
 type TypeDrawerScreen = {

@@ -58,6 +58,23 @@ const LoginScreens: Record<TypeLoginKeys, StackConfig> = {
     name: 'SendOTP',
     component: require('@app-views/Register/SendOTP').default,
   },
+  // Setting
+  MenuSetting: {
+    name: 'MenuSetting',
+    component: require('@app-views/Setting/MenuSetting').default,
+  },
+  Contant: {
+    name: 'Contant',
+    component: require('@app-views/Setting/Contant').default,
+  },
+  Basic: {
+    name: 'Basic',
+    component: require('@app-views/Setting/Basic').default,
+  },
+  Serverpackage: {
+    name: 'Serverpackage',
+    component: require('@app-views/Setting/Serverpackage').default,
+  }
 };
 
 /**
@@ -79,15 +96,6 @@ const MainScreens: Record<TypeMainKeys, StackConfig> = {
     component: require('@app-views/HomeScreen/HomeScreen').default,
   },
 
-  // Modal
-  // ModalAddProduct: {
-  //   name: 'ModalAddProduct',
-  //   component: require('@app-views/Modal/ModalAddProduct').default,
-  //   options: {
-  //     presentation: 'transparentModal',
-  //     animation: 'none',
-  //   },
-  // },
 };
 
 /**

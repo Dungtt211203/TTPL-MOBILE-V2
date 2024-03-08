@@ -1,8 +1,9 @@
+import { StackNavigationProps } from "@app-navigation/types";
 import React, { useState } from "react";
-import { Alert, Modal, View, ScrollView, Text, TouchableOpacity, StyleSheet, Pressable } from "react-native"
-import { SvgXml } from "react-native-svg";
-const Basic = () => {
-    const [modalVisible, setModalVisible] = useState(false);
+import { View, ScrollView, Text, TouchableOpacity, StyleSheet, Pressable } from "react-native"
+export interface BasicProps { };
+const Basic: React.FC<StackNavigationProps<'Basic'>> = () => {
+
     return (
 
         <ScrollView>
@@ -99,7 +100,7 @@ const Basic = () => {
                 <Text style={{ fontWeight: "400", fontSize: 14, marginLeft: 10, color: "#262C41", lineHeight: 24, marginTop: -10 }}>Được hỗ trợ sơ bộ về pháp lý qua ĐT, Email và Skype</Text>
             </View>
             <View style={{ flexDirection: 'row', marginTop: 150, marginLeft: 20 }}>
-                <TouchableOpacity onPress={() => setModalVisible(true)} style={{ width: 335, height: 56, borderRadius: 10, backgroundColor: "#4755D4", marginLeft: 20 }}>
+                <TouchableOpacity style={{ width: 335, height: 56, borderRadius: 10, backgroundColor: "#4755D4", marginLeft: 20 }}>
                     <Text style={{ fontWeight: "700", fontSize: 16, textAlign: "center", color: "#FCFCFE", marginTop: 15 }}>Đăng ký gói</Text>
                 </TouchableOpacity>
             </View>

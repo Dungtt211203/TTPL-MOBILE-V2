@@ -1,12 +1,12 @@
+import { iconBacksmSvg } from "@app-uikits/icon-svg";
 import React from "react";
 import { View, Image, ScrollView, Text, TouchableOpacity } from "react-native"
 import { SvgXml } from "react-native-svg";
-import iconBack from "../../Images/svg/iconBack";
 const LZPRO = () => {
     return (
         <ScrollView>
             <View style={{ flexDirection: 'row', marginTop: 16, }}>
-                <SvgXml xml={iconBack()} style={{ marginLeft: 16 }} />
+                <SvgXml xml={iconBacksmSvg()} style={{ marginLeft: 16 }} />
                 <Text style={{ fontWeight: '700', fontSize: 20, color: "#262C41", marginLeft: 10 }}>Các gói dịch vụ</Text>
             </View>
             <View style={{ flexDirection: 'row', marginTop: 16, marginLeft: 20 }}>

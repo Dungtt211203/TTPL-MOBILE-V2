@@ -1,10 +1,22 @@
+import { useOnEventCallback } from "@app-helper/hooks";
+import { goBack } from "@app-navigation/navigation-services";
+import { StackNavigationProps } from "@app-navigation/types";
+import { iconBacksmSvg } from "@app-uikits/icon-svg";
+import iconBack from "@assets/svg/iconBack";
 import React from "react";
 import { Text, View, TouchableOpacity, SafeAreaView, Image } from "react-native"
 import { SvgXml } from "react-native-svg";
-const Contant = ({ }) => {
+export interface ContantProps { }
+const Contant: React.FC<StackNavigationProps<'Contant'>> = () => {
+    const goToBack = useOnEventCallback(() =>
+        goBack()
+    )
     return (
         <SafeAreaView>
             <View style={{ marginLeft: 16, marginTop: 50, flexDirection: 'row' }}>
+                <TouchableOpacity onPress={goToBack} >
+                    <SvgXml xml={iconBacksmSvg()} />
+                </TouchableOpacity>
                 <Text style={{ fontSize: 20, fontWeight: "700", color: "#262C41", marginLeft: 16 }}>Liên hệ</Text>
             </View>
             <Text style={{ fontSize: 20, fontWeight: "700", color: "#262C41", marginLeft: 32, marginTop: 50 }}>Thông tin liên hệ</Text>

@@ -2,7 +2,7 @@ import FormInputBase from "@app-components/FromInputBase";
 import { useOnEventCallback } from "@app-helper/hooks";
 import { navigate } from "@app-navigation/navigation-services";
 import { StackNavigationProps } from "@app-navigation/types";
-import { iconBackSvg, iconEyeOffSvg, iconEyeSvg, iconFBSvg, iconGGSvg } from "@app-uikits/icon-svg";
+import { iconBackSvg, iconEyeOffSvg, iconFBSvg, iconGGSvg } from "@app-uikits/icon-svg";
 import iconBack from "@assets/svg/iconBackSvg";
 import React, { useState } from "react";
 import { Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
@@ -14,6 +14,9 @@ export interface LoginProps { }
 const Login: React.FC<StackNavigationProps<'Login'>> = () => {
     const gotoForm = useOnEventCallback(() =>
         navigate('SelectAccount'));
+    // Để tạm ở đây
+    const goToSetting = useOnEventCallback(() =>
+        navigate('MenuSetting'));
     const goToForgetPassWord = useOnEventCallback(() =>
         navigate('ForgetPassword'));
     return (
@@ -49,7 +52,7 @@ const Login: React.FC<StackNavigationProps<'Login'>> = () => {
                 <TouchableOpacity onPress={goToForgetPassWord}><Text style={styles.textForgetPass}>Quên mật khẩu ?</Text></TouchableOpacity>
             </View>
             {/* Button */}
-            <TouchableOpacity style={styles.buttonLogin}>
+            <TouchableOpacity onPress={goToSetting} style={styles.buttonLogin}>
                 <Text style={styles.textbuttonLogin}>Đăng nhập</Text>
             </TouchableOpacity>
             {/* Text bạn chưa có tài khoản */}
