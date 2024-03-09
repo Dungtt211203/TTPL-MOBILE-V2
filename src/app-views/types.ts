@@ -1,4 +1,5 @@
 import { HomeScreenProps } from './HomeScreen/HomeScreen';
+import { NotificationProps } from './HomeScreen/Notification';
 import { FormLoginProps } from './Login/FormLogin';
 import { LoginProps } from './Login/Login';
 import { SelectAccountProps } from './Login/SelectAccount';
@@ -13,6 +14,7 @@ import { BuyPackageModalLZPROProps } from './Setting/BuyPackageModalLZPRO';
 import { BuyingGuideProps } from './Setting/BuyingGuide';
 import { ContantProps } from './Setting/Contant';
 import { LZPROProps } from './Setting/LZPRO';
+import { LegalNewProps } from './Setting/LegalNew';
 import { MenuSettingProps } from './Setting/MenuSetting';
 import { PayServiceProps } from './Setting/PayService';
 import { ServerpackageProps } from './Setting/Serverpackage';
@@ -22,7 +24,7 @@ type TypeMainScreen = {
   BottomTabs: any;
   //client
   HomeScreen: HomeScreenProps;
-  // Setting
+
 };
 
 type TypeTutorialScreen = {
@@ -37,6 +39,7 @@ type TypeLoginScreen = {
   ForgetPassword: ForgetPasswordProps;
   ResetPassword: ResetPasswordProps;
   SendOTP: SendOTPProps;
+  // Setting: Chưa Navigation vào Main được
   MenuSetting: MenuSettingProps;
   Contant: ContantProps;
   Basic: BasicProps;
@@ -47,6 +50,8 @@ type TypeLoginScreen = {
   BuyingGuide: BuyingGuideProps;
   PayService: PayServiceProps;
   About: AboutProps;
+  LegalNew: LegalNewProps;
+  Notification: NotificationProps;
 };
 
 type TypeDrawerScreen = {

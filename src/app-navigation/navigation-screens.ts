@@ -24,7 +24,25 @@ export interface StackConfig<T extends 'Navigation' | 'Drawer' = 'Navigation'> {
   | undefined;
   listeners?: any;
 }
-
+/**
+ * App Main Screen
+ */
+const MainScreens: Record<TypeMainKeys, StackConfig> = {
+  NavigationDrawer: {
+    name: 'NavigationDrawer',
+    component: require('@app-navigation/Drawer/navigation-drawer').default,
+  },
+  BottomTabs: {
+    name: 'BottomTabs',
+    component: require('@app-navigation/BottomTabs/navigation-bottom-tabs')
+      .default,
+  },
+  //client
+  HomeScreen: {
+    name: 'HomeScreen',
+    component: require('@app-views/HomeScreen/HomeScreen').default,
+  },
+};
 /**
  * Tutorial Screens
  */
@@ -58,7 +76,7 @@ const LoginScreens: Record<TypeLoginKeys, StackConfig> = {
     name: 'SendOTP',
     component: require('@app-views/Register/SendOTP').default,
   },
-  // Setting
+  // Settings: Chưa Navigation vào Main được
   MenuSetting: {
     name: 'MenuSetting',
     component: require('@app-views/Setting/MenuSetting').default,
@@ -78,6 +96,29 @@ const LoginScreens: Record<TypeLoginKeys, StackConfig> = {
   LZPRO: {
     name: 'LZPRO',
     component: require('@app-views/Setting/LZPRO').default,
+  },
+  PayService: {
+    name: 'PayService',
+    component: require('@app-views/Setting/PayService').default,
+  },
+  LegalNew: {
+    name: 'LegalNew',
+    component: require('@app-views/Setting/LegalNew').default,
+  },
+  Notification: {
+    name: 'Notification',
+    component: require('@app-views/HomeScreen/Notification').default,
+  },
+  // Modal
+  About: {
+    name: 'About',
+    component:
+      require('@app-views/Setting/About')
+        .default,
+    options: {
+      presentation: 'transparentModal',
+      animation: 'none',
+    },
   },
   BuyPackageModalLZPRO: {
     name: 'BuyPackageModalLZPRO',
@@ -109,43 +150,7 @@ const LoginScreens: Record<TypeLoginKeys, StackConfig> = {
       animation: 'none',
     },
   },
-  PayService: {
-    name: 'PayService',
-    component: require('@app-views/Setting/PayService').default,
-  },
-  About: {
-    name: 'About',
-    component:
-      require('@app-views/Setting/About')
-        .default,
-    options: {
-      presentation: 'transparentModal',
-      animation: 'none',
-    },
-  }
 };
-
-/**
- * App Main Screen
- */
-const MainScreens: Record<TypeMainKeys, StackConfig> = {
-  NavigationDrawer: {
-    name: 'NavigationDrawer',
-    component: require('@app-navigation/Drawer/navigation-drawer').default,
-  },
-  BottomTabs: {
-    name: 'BottomTabs',
-    component: require('@app-navigation/BottomTabs/navigation-bottom-tabs')
-      .default,
-  },
-  //client
-  HomeScreen: {
-    name: 'HomeScreen',
-    component: require('@app-views/HomeScreen/HomeScreen').default,
-  },
-
-};
-
 /**
  * Drawer Navigation
  */

@@ -29,4 +29,12 @@ export { default as iconPhoneSvg } from '@assets/svg/iconPhone';
 export { default as iconBacksmSvg } from '@assets/svg/iconBack';
 export { default as iconLinesmSvg } from '@assets/svg/iconLinesm';
 export { default as iconCopySvg } from '@assets/svg/iconCopy';
+export { default as iconLNDSvg } from '@assets/svg/iconAnhlnd';
+export { default as iconPHSvg } from '@assets/svg/iconAnhPH';
+export { default as iconTMPSvg } from '@assets/svg/iconAnhTMP';
+export { default as iconTLSvg } from '@assets/svg/iconAnhTL';
+export { default as iconTronXanhSvg } from '@assets/svg/iconTronColorXanh';
+export { default as iconTronGraySvg } from '@assets/svg/iconTronColorGray';
+export { default as iconChatSvg } from '@assets/svg/iconChat';
+export { default as iconExitSvg } from '@assets/svg/iconExit';
 

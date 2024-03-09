@@ -2,20 +2,24 @@ import { SafeAreaView, View, Text, TouchableOpacity, Modal, Alert } from "react-
 import React, { useState } from "react";
 import { StackNavigationProps } from "@app-navigation/types";
 import { SvgXml } from "react-native-svg";
-import { iconAccountSvg, iconBoxSvg, iconEvaluateSvg, iconLetterSvg, iconLettersmallSvg, iconLocationSvg, iconLogoSvg, iconNewSvg, iconPhoneSvg, iconPhonesmallSvg, iconQuestionSvg, iconShareSvg } from "@app-uikits/icon-svg";
+import { iconAccountSvg, iconBoxSvg, iconEvaluateSvg, iconExitSvg, iconLetterSvg, iconLettersmallSvg, iconLocationSvg, iconLogoSvg, iconNewSvg, iconPhoneSvg, iconPhonesmallSvg, iconQuestionSvg, iconShareSvg } from "@app-uikits/icon-svg";
 import { useOnEventCallback } from "@app-helper/hooks";
 import { goBack, navigate } from "@app-navigation/navigation-services";
 import style_c from "@assets/styles/styles_c"
 export interface MenuSettingProps { }
 const MenuSetting: React.FC<StackNavigationProps<'MenuSetting'>> = () => {
     const [modalVisible, setModalVisible] = useState(false);
-
     const goToContant = useOnEventCallback(() =>
         navigate('Contant'));
     const goToServerpackage = useOnEventCallback(() =>
         navigate('Serverpackage'));
     const goToAbout = useOnEventCallback(() =>
         navigate('About'));
+    const goToNotification = useOnEventCallback(() =>
+        navigate('Notification'));
+    const goToBack = useOnEventCallback(() =>
+        goBack()
+    )
     return (
         <SafeAreaView>
             {/* <Modal
@@ -27,6 +31,9 @@ const MenuSetting: React.FC<StackNavigationProps<'MenuSetting'>> = () => {
                     setModalVisible(!modalVisible);
                 }}></Modal> */}
             <View style={{ width: "100%", height: 221, backgroundColor: "#4755D4" }}>
+                <TouchableOpacity onPress={goToBack}>
+                    <SvgXml xml={iconExitSvg()} style={{ alignSelf: "flex-end", marginRight: 16, marginTop: 16 }} />
+                </TouchableOpacity>
                 <Text style={{ ...style_c.font_text_20_600, color: "#FCFCFE", marginLeft: 30, marginTop: 50 }}>Trần Đức Thành</Text>
                 <Text style={{ ...style_c.font_text_14_400, color: "#FCFCFE", marginLeft: 30 }}>thanhvn.hd@gmail.com</Text>
                 <TouchableOpacity style={{ width: 132, height: 28, marginLeft: 30, backgroundColor: "#FCFCFE", marginTop: 30, borderRadius: 12 }}>
@@ -38,7 +45,7 @@ const MenuSetting: React.FC<StackNavigationProps<'MenuSetting'>> = () => {
             </TouchableOpacity>
             <SvgXml xml={iconQuestionSvg()} style={{ marginLeft: 40 }} />
             <View style={{ marginLeft: 80, marginTop: -30 }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={goToNotification}>
                     <Text style={{ ...style_c.font_text_16_600, color: "#262C41" }}>Hỏi đáp Pháp luật</Text>
                 </TouchableOpacity>
             </View>
