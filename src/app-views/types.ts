@@ -6,9 +6,15 @@ import { SelectBusinessProps } from './Login/SelectBussiness';
 import { ForgetPasswordProps } from './Register/ForgotPassword';
 import { ResetPasswordProps } from './Register/ResetPassword';
 import { SendOTPProps } from './Register/SendOTP';
+import { AboutProps } from './Setting/About';
 import { BasicProps } from './Setting/Basic';
+import { BuyPackageModalBasicProps } from './Setting/BuyPackageModalBasic';
+import { BuyPackageModalLZPROProps } from './Setting/BuyPackageModalLZPRO';
+import { BuyingGuideProps } from './Setting/BuyingGuide';
 import { ContantProps } from './Setting/Contant';
+import { LZPROProps } from './Setting/LZPRO';
 import { MenuSettingProps } from './Setting/MenuSetting';
+import { PayServiceProps } from './Setting/PayService';
 import { ServerpackageProps } from './Setting/Serverpackage';
 
 type TypeMainScreen = {
@@ -35,6 +41,12 @@ type TypeLoginScreen = {
   Contant: ContantProps;
   Basic: BasicProps;
   Serverpackage: ServerpackageProps;
+  LZPRO: LZPROProps;
+  BuyPackageModalLZPRO: BuyPackageModalLZPROProps;
+  BuyPackageModalBasic: BuyPackageModalBasicProps;
+  BuyingGuide: BuyingGuideProps;
+  PayService: PayServiceProps;
+  About: AboutProps;
 };
 
 type TypeDrawerScreen = {

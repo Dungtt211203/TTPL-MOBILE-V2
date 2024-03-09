@@ -1,0 +1,115 @@
+import React, { useCallback, useState } from 'react';
+import { StackNavigationProps } from '@app-navigation/types';
+import { Box, Text, Input } from 'native-base';
+import { Dimensions, FlatList, StyleSheet, TextInput, View } from 'react-native';
+import styles_c from '@assets/styles/styles_c';
+import {
+    GestureHandlerRootView,
+    TouchableOpacity,
+} from 'react-native-gesture-handler';
+import BaseModal from './BaseModal';
+import { SvgXml } from 'react-native-svg';
+import { iconLineSvg, iconLinesmSvg } from '@app-uikits/icon-svg';
+import { useOnEventCallback } from '@app-helper/hooks';
+import { navigate } from '@app-navigation/navigation-services';
+
+export interface BuyPackageModalLZPROProps { }
+
+const BuyPackageModal: React.FC<
+    StackNavigationProps<'BuyPackageModalLZPRO'>
+> = () => {
+    const goToBuyingGuide = useOnEventCallback(() =>
+        navigate('BuyingGuide'));
+    const goToPayService = useOnEventCallback(() =>
+        navigate('PayService'));
+    return (
+        <GestureHandlerRootView>
+            <BaseModal isVisible={true}>
+                <SvgXml xml={iconLinesmSvg()} style={{ alignSelf: "center", marginTop: 16 }} />
+                <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingHorizontal: 16,
+                        paddingVertical: 8,
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                    }}>
+                    <Text style={{ ...styles_c.font_text_22_600 }}>Đăng ký gói LZPRO</Text>
+                </View>
+                <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingHorizontal: 16,
+                        paddingVertical: 8,
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        borderWidth: 1,
+                        height: 64,
+                        width: 343,
+                        marginLeft: 16,
+                        borderRadius: 20,
+                        borderColor: "#B5B9C7"
+
+                    }}>
+                    <Text style={{ ...styles_c.font_text_14_400, color: "#B5B9C7" }}>LZ Pro 1: 119.000đ/người/tháng (01 người sử dụng tại 1 thời điểm)</Text>
+                </View>
+                <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingHorizontal: 16,
+                        paddingVertical: 8,
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        marginTop: 16,
+                        borderWidth: 1,
+                        height: 64,
+                        width: 343,
+                        marginLeft: 16,
+                        borderRadius: 20,
+                        borderColor: "#B5B9C7"
+                    }}>
+                    <Text style={{ ...styles_c.font_text_14_400, color: "#4755D4" }}>LZ Pro 2: 139.000đ/người/tháng (02 người sử dụng tại 1 thời điểm)</Text>
+                </View>
+                <View
+                    style={{
+                        flexDirection: 'row',
+                        paddingHorizontal: 16,
+                        paddingVertical: 8,
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        marginTop: 16,
+                        borderWidth: 1,
+                        height: 64,
+                        width: 343,
+                        marginLeft: 16,
+                        borderRadius: 20,
+                        borderColor: "#B5B9C7"
+                    }}>
+                    <Text style={{ ...styles_c.font_text_14_400, color: "#B5B9C7" }}>LZ Pro 3: 159.000đ/người/tháng (05 người sử dụng tại 1 thời điểm)</Text>
+                </View>
+                <View style={{ flexDirection: "row", marginLeft: 20 }}>
+                    <TouchableOpacity onPress={goToPayService} style={{ width: 163, height: 56, backgroundColor: "#4755D4", marginTop: 16, borderRadius: 20 }}>
+                        <Text style={{ ...styles_c.font_text_16_600, color: "#FCFCFE", alignSelf: "center", marginTop: 10 }}>Đăng ký gói</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={goToBuyingGuide} style={{ width: 163, height: 56, backgroundColor: "#EBEDF3", marginTop: 16, borderRadius: 20, marginLeft: 16 }}>
+                        <Text style={{ ...styles_c.font_text_16_600, color: "#262C41", alignSelf: "center", marginTop: 10 }}>Hướng dẫn mua</Text>
+                    </TouchableOpacity>
+                </View>
+            </BaseModal>
+        </GestureHandlerRootView>
+    );
+};
+const styles = StyleSheet.create({
+    columnWrapper: {
+        flex: 1,
+        justifyContent: 'space-between',
+    },
+
+    item: {
+        width: '33%',
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+        marginTop: 6,
+    },
+});
+export default BuyPackageModal;

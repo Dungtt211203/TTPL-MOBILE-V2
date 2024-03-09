@@ -27,4 +27,6 @@ export { default as iconLettersmallSvg } from '@assets/svg/iconLettersmall';
 export { default as iconAccountSvg } from '@assets/svg/iconAccount';
 export { default as iconPhoneSvg } from '@assets/svg/iconPhone';
 export { default as iconBacksmSvg } from '@assets/svg/iconBack';
+export { default as iconLinesmSvg } from '@assets/svg/iconLinesm';
+export { default as iconCopySvg } from '@assets/svg/iconCopy';
 

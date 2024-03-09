@@ -74,6 +74,54 @@ const LoginScreens: Record<TypeLoginKeys, StackConfig> = {
   Serverpackage: {
     name: 'Serverpackage',
     component: require('@app-views/Setting/Serverpackage').default,
+  },
+  LZPRO: {
+    name: 'LZPRO',
+    component: require('@app-views/Setting/LZPRO').default,
+  },
+  BuyPackageModalLZPRO: {
+    name: 'BuyPackageModalLZPRO',
+    component:
+      require('@app-views/Setting/BuyPackageModalLZPRO')
+        .default,
+    options: {
+      presentation: 'transparentModal',
+      animation: 'none',
+    },
+  },
+  BuyPackageModalBasic: {
+    name: 'BuyPackageModalBasic',
+    component:
+      require('@app-views/Setting/BuyPackageModalBasic')
+        .default,
+    options: {
+      presentation: 'transparentModal',
+      animation: 'none',
+    },
+  },
+  BuyingGuide: {
+    name: 'BuyingGuide',
+    component:
+      require('@app-views/Setting/BuyingGuide')
+        .default,
+    options: {
+      presentation: 'transparentModal',
+      animation: 'none',
+    },
+  },
+  PayService: {
+    name: 'PayService',
+    component: require('@app-views/Setting/PayService').default,
+  },
+  About: {
+    name: 'About',
+    component:
+      require('@app-views/Setting/About')
+        .default,
+    options: {
+      presentation: 'transparentModal',
+      animation: 'none',
+    },
   }
 };
 
@@ -101,7 +149,7 @@ const MainScreens: Record<TypeMainKeys, StackConfig> = {
 /**
  * Drawer Navigation
  */
-const DrawerScreens: Record<TypeDrawerKeys, StackConfig<'Drawer'>> = {
+const DrawerScreens: Record<TypeDrawerKeys, StackConfig> = {
   BottomContainer: {
     name: 'BottomContainer',
     component: require('@app-navigation/BottomTabs/BottomContainer').default,

@@ -1,7 +1,7 @@
 import { useOnEventCallback } from "@app-helper/hooks";
 import { goBack, navigate } from "@app-navigation/navigation-services";
 import { StackNavigationProps } from "@app-navigation/types";
-import { iconBackSvg, iconBuiding, iconIndividual, iconLawver, iconLine, iconStateoffcials } from "@app-uikits/icon-svg";
+import { iconBackSvg, iconBuidingSvg, iconIndividualSvg, iconLawverSvg, iconLineSvg, iconStateoffcialsSvg } from "@app-uikits/icon-svg";
 import React from "react";
 import { SafeAreaView, View, Text, TouchableOpacity } from "react-native";
 import { SvgXml } from "react-native-svg";
@@ -30,7 +30,7 @@ const SelectAccount: React.FC<StackNavigationProps<'SelectAccount'>> = () => {
                     backgroundColor: "#4755D4",
                     marginLeft: 110
                 }}></View>
-                <SvgXml xml={iconLine()} style={{ backgroundColor: "#B5B9C7", marginLeft: 120, marginTop: -10 }} />
+                <SvgXml xml={iconLineSvg()} style={{ backgroundColor: "#B5B9C7", marginLeft: 120, marginTop: -10 }} />
                 <View style={{
                     width: 16,
                     height: 16,
@@ -42,17 +42,17 @@ const SelectAccount: React.FC<StackNavigationProps<'SelectAccount'>> = () => {
                 <Text style={{ marginTop: 30, marginLeft: 16 }}>1.Chọn loại tài khoản</Text>
             </View>
             <View style={{ marginLeft: 16, marginTop: 30 }}>
-                <SvgXml xml={iconLawver()} />
+                <SvgXml xml={iconLawverSvg()} />
             </View>
             <View
                 style={{ marginLeft: 230, marginTop: -140 }}>
-                <SvgXml xml={iconBuiding()} />
+                <SvgXml xml={iconBuidingSvg()} />
             </View>
             <View style={{ marginTop: 30, marginLeft: 16 }}>
-                <SvgXml xml={iconIndividual()} />
+                <SvgXml xml={iconIndividualSvg()} />
             </View>
             <View style={{ marginLeft: 230, marginTop: -140 }}>
-                <SvgXml xml={iconStateoffcials()} />
+                <SvgXml xml={iconStateoffcialsSvg()} />
             </View>
             <View>
                 <TouchableOpacity onPress={goToSelectBussiness} style={{

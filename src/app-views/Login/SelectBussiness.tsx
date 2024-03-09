@@ -1,7 +1,8 @@
 import { useOnEventCallback } from "@app-helper/hooks";
 import { goBack, navigate } from "@app-navigation/navigation-services";
 import { StackNavigationProps } from "@app-navigation/types";
-import { iconBackSvg, iconBuidingLarge, iconLawverLarge } from "@app-uikits/icon-svg";
+import { iconBackSvg, iconLawverLargeSvg } from "@app-uikits/icon-svg";
+import iconBuidingLarge from "@assets/svg/iconBuidingLarge";
 import React from "react";
 import { Text, View, SafeAreaView, TouchableOpacity } from "react-native";
 import { SvgXml } from "react-native-svg";
@@ -56,7 +57,7 @@ const SelectBusiness: React.FC<StackNavigationProps<'SelectBusiness'>> = () => {
                 }}>Bạn có phải Công ty Luật không?</Text>
             </View>
             <View style={{ marginLeft: 16, marginTop: 30 }}>
-                <SvgXml xml={iconLawverLarge()} />
+                <SvgXml xml={iconLawverLargeSvg()} />
             </View>
             <View
                 style={{ marginLeft: 230, marginTop: -215 }}>

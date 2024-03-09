@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions, Platform} from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native';
 import sizes from './sizes';
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -10,7 +10,7 @@ const styles_c = StyleSheet.create({
         shadowColor: 'rgba(0, 0, 0, 0.8)',
         shadowOpacity: 0.3,
         shadowRadius: 2,
-        shadowOffset: {width: 0.2, height: 0.2},
+        shadowOffset: { width: 0.2, height: 0.2 },
       },
       android: {
         elevation: 3,
@@ -24,7 +24,7 @@ const styles_c = StyleSheet.create({
     paddingHorizontal: sizes._20sdp,
     borderBottomWidth: 1,
     borderColor: '#F1F1F1',
-    paddingTop: Platform.OS == 'ios' ? 0 : sizes._10sdp,
+    paddingVertical: Platform.OS == 'ios' ? 0 : sizes._10sdp,
     paddingBottom: sizes._10sdp,
   },
   row_start: {
@@ -47,10 +47,10 @@ const styles_c = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
-  row_around:{
-    flexDirection:'row',
-    justifyContent:'space-around',
-    alignItems:'center',
+  row_around: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
   border_bottom: {
     borderBottomWidth: 1,
@@ -120,7 +120,7 @@ const styles_c = StyleSheet.create({
     fontSize: sizes._16sdp,
     fontWeight: Platform.OS == 'ios' ? '600' : '700',
     color: '#2D2D2D',
-    paddingTop: sizes._6sdp,
+    paddingVertical: sizes._6sdp,
   },
   font_text_18_400: {
     fontSize: sizes._18sdp,
@@ -131,7 +131,7 @@ const styles_c = StyleSheet.create({
     fontSize: sizes._18sdp,
     fontWeight: Platform.OS == 'ios' ? '600' : '700',
     color: '#2D2D2D',
-    paddingTop: sizes._6sdp,
+    paddingVertical: sizes._6sdp,
   },
   font_text_20_400: {
     fontSize: sizes._20sdp,
@@ -142,7 +142,7 @@ const styles_c = StyleSheet.create({
     fontSize: sizes._20sdp,
     fontWeight: Platform.OS == 'ios' ? '600' : '700',
     color: '#2D2D2D',
-    paddingTop: sizes._6sdp,
+    paddingVertical: sizes._6sdp,
   },
   font_text_22_400: {
     fontSize: sizes._22sdp,
@@ -153,7 +153,7 @@ const styles_c = StyleSheet.create({
     fontSize: sizes._22sdp,
     fontWeight: Platform.OS == 'ios' ? '600' : '700',
     color: '#2D2D2D',
-    paddingTop: sizes._6sdp,
+    paddingVertical: sizes._6sdp,
   },
 });
 export default styles_c;
