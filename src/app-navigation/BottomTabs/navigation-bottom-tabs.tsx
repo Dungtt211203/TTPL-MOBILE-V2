@@ -1,22 +1,22 @@
-import {useOnEventCallback} from '@app-helper/hooks';
+import { useOnEventCallback } from '@app-helper/hooks';
 import {
   BottomTabBarProps,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
-import {find} from 'lodash';
+import { find } from 'lodash';
 import React from 'react';
-import {Platform, SafeAreaView} from 'react-native';
+import { Platform, SafeAreaView } from 'react-native';
 import BottomTab from './BottomTab';
 import styles from './NavigationBottom.styles';
-import EStyleSheet from 'react-native-extended-stylesheet';
-import {SvgXml} from 'react-native-svg';
+import { SvgXml } from 'react-native-svg';
 import {
-  iconHomeSvg,
-  iconNotifiSvg,
-  iconUtilitiesSvg,
+  iconBagSvg,
+  iconFlieSvg,
+  iconHomeColorSvg,
+  iconChatSvg,
+  iconLNDBTSvg
 } from '@app-uikits/icon-svg';
-import Feather from 'react-native-vector-icons/Feather';
-import {Box} from 'native-base';
+import { Box } from 'native-base';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,38 +31,38 @@ enum MainTab {
 const Tabs = [
   {
     name: MainTab.Home,
-    screen: require('@app-views/HomeScreen/HomeScreen').default,
-    icon: (color: string) => <SvgXml xml={iconHomeSvg(color)} />,
+    screen: require('@app-views/HomeScreen/HomePageArticle').default,
+    icon: () => <SvgXml xml={iconBagSvg()} />,
   },
   {
     name: MainTab.Notification,
-    screen: require('@app-views/HomeScreen/HomeScreen').default,
-    icon: (color: string) => <SvgXml xml={iconNotifiSvg(color)} />,
+    screen: require('@app-views/HomeScreen/Notification').default,
+    icon: () => <SvgXml xml={iconFlieSvg()} />,
   },
   {
     name: MainTab.News,
     screen: require('@app-views/HomeScreen/HomeScreen').default,
-    icon: (color: string) => <SvgXml xml={iconNotifiSvg()} />,
+    icon: () => <SvgXml xml={iconHomeColorSvg()} />,
   },
   {
     name: MainTab.Utilities,
-    screen: require('@app-views/HomeScreen/HomeScreen').default,
-    icon: (color: string) => <SvgXml xml={iconUtilitiesSvg(color)} />,
+    screen: require('@app-views/Message/HomeMassage').default,
+    icon: () => <SvgXml xml={iconChatSvg()} />,
   },
   {
     name: MainTab.Account,
-    screen: require('@app-views/HomeScreen/HomeScreen').default,
-    icon: (color: string) => <Feather name={'user'} size={24} color={color} />,
+    screen: require('@app-views/Setting/MenuSetting').default,
+    icon: () => <SvgXml xml={iconLNDBTSvg()} />,
   },
 ];
 
 const BottomTabs: React.FC = () => {
   const CustomTabar = useOnEventCallback((props: BottomTabBarProps) => {
-    const {descriptors, navigation, state} = props;
+    const { descriptors, navigation, state } = props;
 
     return (
       <Box
-        style={{borderRadius: 50}}
+        style={{ borderRadius: 50 }}
         height={Platform.OS === 'ios' ? '85px' : '70px'}
         shadow={9}
         borderTopLeftRadius={'16px'}
@@ -70,7 +70,7 @@ const BottomTabs: React.FC = () => {
         <Box style={styles.container}>
           <SafeAreaView style={styles.viewTab}>
             {state.routes.map((route: any, index: number) => {
-              const {options} = descriptors[route.key];
+              const { options } = descriptors[route.key];
               const screen_name = route.name as MainTab;
               const tab = find(Tabs, ['name', screen_name]);
 
@@ -93,14 +93,11 @@ const BottomTabs: React.FC = () => {
                   target: route.key,
                 });
               };
-              const color = isFocused
-                ? EStyleSheet.value('$mainColor')
-                : '#999999';
 
               return (
                 <BottomTab
                   key={route.key}
-                  icon={tab?.icon(color)}
+                  icon={tab?.icon()}
                   accessibilityLabel={options.tabBarAccessibilityLabel}
                   isActive={isFocused}
                   onLongPress={onLongPress}

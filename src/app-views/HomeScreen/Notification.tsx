@@ -1,7 +1,7 @@
 import { useOnEventCallback } from "@app-helper/hooks";
 import { goBack } from "@app-navigation/navigation-services";
 import { StackNavigationProps } from "@app-navigation/types";
-import { iconBacksmSvg, iconChatSvg } from "@app-uikits/icon-svg";
+import { iconBacksmSvg, iconChatSvg, iconChatTBSvg } from "@app-uikits/icon-svg";
 import React from "react";
 import { View, ScrollView, Text, TouchableOpacity } from "react-native"
 import { SvgXml } from "react-native-svg";
@@ -55,7 +55,7 @@ const Notification: React.FC<StackNavigationProps<'Notification'>> = () => {
             <View style={{ paddingVertical: 16, flexDirection: 'row', paddingHorizontal: 16 }}>
                 <TouchableOpacity style={{ height: 40, width: 140, backgroundColor: "#4755D4", borderRadius: 20, marginLeft: 16 }}>
                     <View style={{ flexDirection: 'row' }}>
-                        <SvgXml xml={iconChatSvg()} style={{ marginTop: 10, marginLeft: 10 }} />
+                        <SvgXml xml={iconChatTBSvg()} style={{ marginTop: 10, marginLeft: 10 }} />
                         <Text style={{ marginTop: 10, marginLeft: 8, ...styles_c.font_text_16_400, color: '#FFFFFF' }}>Chat ngay</Text>
                     </View>
                 </TouchableOpacity>

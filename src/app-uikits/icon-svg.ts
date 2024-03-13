@@ -37,4 +37,18 @@ export { default as iconTronXanhSvg } from '@assets/svg/iconTronColorXanh';
 export { default as iconTronGraySvg } from '@assets/svg/iconTronColorGray';
 export { default as iconChatSvg } from '@assets/svg/iconChat';
 export { default as iconExitSvg } from '@assets/svg/iconExit';
+export { default as iconBagSvg } from '@assets/svg/iconBag';
+export { default as iconFlieSvg } from '@assets/svg/iconFile';
+export { default as iconLNDBTSvg } from '@assets/svg/iconLNDBT';
+export { default as iconHomeColorSvg } from '@assets/svg/iconHomeColor';
+export { default as iconTBMesSvg } from '@assets/svg/iconTBMes';
+export { default as iconSearchSvg } from '@assets/svg/iconSearch';
+export { default as iconSearchColorSvg } from '@assets/svg/iconSearchColor';
+export { default as iconNLHSvg } from '@assets/svg/iconNLH';
+export { default as iconChatTBSvg } from '@assets/svg/iconChatTB';
+export { default as iconLND4040Svg } from '@assets/svg/iconLNĐ4040';
+export { default as iconTronXanhLaSvg } from '@assets/svg/iconTronXanhLa';
+export { default as iconRecordSvg } from '@assets/svg/iconRecord';
+export { default as iconXexitSvg } from '@assets/svg/iconXExit';
+export { default as iconMenuTabSvg } from '@assets/svg/iconMenuTab';
 

@@ -1,16 +1,8 @@
-import {Text} from 'native-base';
-import React, {useEffect} from 'react';
-import {TouchableWithoutFeedback, View, Platform} from 'react-native';
-import Animated, {
-  Easing,
-  useSharedValue,
-  withSequence,
-  withTiming,
-} from 'react-native-reanimated';
-import {SvgXml} from 'react-native-svg';
+import { Text } from 'native-base';
+import React, { useEffect } from 'react';
+import { TouchableWithoutFeedback, View, Platform } from 'react-native';
 import styles from './NavigationBottom.styles';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import Entypo from 'react-native-vector-icons/Entypo';
 import styles_c from '@assets/styles/styles_c';
 
 interface TabProps {
@@ -27,7 +19,6 @@ const BottomTab: React.FC<TabProps> = ({
   isActive,
   accessibilityLabel,
   icon,
-  onLongPress,
   onPress,
   index,
   name,
@@ -35,7 +26,7 @@ const BottomTab: React.FC<TabProps> = ({
   return (
     <TouchableWithoutFeedback
       accessibilityRole="button"
-      accessibilityState={isActive ? {selected: true} : {}}
+      accessibilityState={isActive ? { selected: true } : {}}
       accessibilityLabel={accessibilityLabel}
       onPress={onPress}>
       <View
@@ -52,14 +43,14 @@ const BottomTab: React.FC<TabProps> = ({
           {isActive && (
             <Text
               color={EStyleSheet.value('$mainColor')}
-              style={{fontSize: 20}}>
+              style={{ fontSize: 20 }}>
               •
             </Text>
           )}
         </View>
-        <View style={{marginBottom: 9}}>{icon}</View>
+        <View style={{ marginBottom: 9 }}>{icon}</View>
         <Text
-          style={{...styles_c.font_text_12_400}}
+          style={{ ...styles_c.font_text_12_400 }}
           color={isActive ? EStyleSheet.value('$mainColor') : '#5A5A5A'}>
           {name}
         </Text>

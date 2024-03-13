@@ -42,40 +42,6 @@ const MainScreens: Record<TypeMainKeys, StackConfig> = {
     name: 'HomeScreen',
     component: require('@app-views/HomeScreen/HomeScreen').default,
   },
-};
-/**
- * Tutorial Screens
- */
-const LoginScreens: Record<TypeLoginKeys, StackConfig> = {
-  Login: {
-    name: 'Login',
-    component: require('@app-views/Login/Login').default,
-  },
-  FormLogin: {
-    name: 'FormLogin',
-    component: require('@app-views/Login/FormLogin').default,
-  },
-  SelectAccount: {
-    name: 'SelectAccount',
-    component: require('@app-views/Login/SelectAccount').default,
-  },
-  SelectBusiness: {
-    name: 'SelectBusiness',
-    component: require('@app-views/Login/SelectBussiness').default,
-  },
-  // Register
-  ForgetPassword: {
-    name: 'ForgetPassword',
-    component: require('@app-views/Register/ForgotPassword').default,
-  },
-  ResetPassword: {
-    name: 'ResetPassword',
-    component: require('@app-views/Register/ResetPassword').default,
-  },
-  SendOTP: {
-    name: 'SendOTP',
-    component: require('@app-views/Register/SendOTP').default,
-  },
   // Settings: Chưa Navigation vào Main được
   MenuSetting: {
     name: 'MenuSetting',
@@ -150,6 +116,41 @@ const LoginScreens: Record<TypeLoginKeys, StackConfig> = {
       animation: 'none',
     },
   },
+};
+/**
+ * Tutorial Screens
+ */
+const LoginScreens: Record<TypeLoginKeys, StackConfig> = {
+  Login: {
+    name: 'Login',
+    component: require('@app-views/Login/Login').default,
+  },
+  FormRegister: {
+    name: 'FormRegister',
+    component: require('@app-views/Register/FormRegister').default,
+  },
+  SelectAccount: {
+    name: 'SelectAccount',
+    component: require('@app-views/Login/SelectAccount').default,
+  },
+  SelectBusiness: {
+    name: 'SelectBusiness',
+    component: require('@app-views/Login/SelectBussiness').default,
+  },
+  // Register
+  ForgetPassword: {
+    name: 'ForgetPassword',
+    component: require('@app-views/Register/ForgotPassword').default,
+  },
+  ResetPassword: {
+    name: 'ResetPassword',
+    component: require('@app-views/Register/ResetPassword').default,
+  },
+  SendOTP: {
+    name: 'SendOTP',
+    component: require('@app-views/Register/SendOTP').default,
+  },
+
 };
 /**
  * Drawer Navigation

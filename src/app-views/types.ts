@@ -1,10 +1,10 @@
 import { HomeScreenProps } from './HomeScreen/HomeScreen';
 import { NotificationProps } from './HomeScreen/Notification';
-import { FormLoginProps } from './Login/FormLogin';
 import { LoginProps } from './Login/Login';
 import { SelectAccountProps } from './Login/SelectAccount';
 import { SelectBusinessProps } from './Login/SelectBussiness';
 import { ForgetPasswordProps } from './Register/ForgotPassword';
+import { FormRegisterProps } from './Register/FormRegister';
 import { ResetPasswordProps } from './Register/ResetPassword';
 import { SendOTPProps } from './Register/SendOTP';
 import { AboutProps } from './Setting/About';
@@ -24,21 +24,6 @@ type TypeMainScreen = {
   BottomTabs: any;
   //client
   HomeScreen: HomeScreenProps;
-
-};
-
-type TypeTutorialScreen = {
-  // Tutorial: TutorialProps;
-};
-
-type TypeLoginScreen = {
-  Login: LoginProps;
-  FormLogin: FormLoginProps;
-  SelectAccount: SelectAccountProps;
-  SelectBusiness: SelectBusinessProps;
-  ForgetPassword: ForgetPasswordProps;
-  ResetPassword: ResetPasswordProps;
-  SendOTP: SendOTPProps;
   // Setting: Chưa Navigation vào Main được
   MenuSetting: MenuSettingProps;
   Contant: ContantProps;
@@ -52,6 +37,21 @@ type TypeLoginScreen = {
   About: AboutProps;
   LegalNew: LegalNewProps;
   Notification: NotificationProps;
+};
+
+type TypeTutorialScreen = {
+  // Tutorial: TutorialProps;
+};
+
+type TypeLoginScreen = {
+  Login: LoginProps;
+  FormRegister: FormRegisterProps;
+  SelectAccount: SelectAccountProps;
+  SelectBusiness: SelectBusinessProps;
+  ForgetPassword: ForgetPasswordProps;
+  ResetPassword: ResetPasswordProps;
+  SendOTP: SendOTPProps;
+
 };
 
 type TypeDrawerScreen = {

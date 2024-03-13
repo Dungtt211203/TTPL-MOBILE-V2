@@ -46,9 +46,10 @@ const ForgetPassword: React.FC<StackNavigationProps<'ForgetPassword'>> = () => {
                         tục</Text>
                 </TouchableOpacity>
             </View>
-            <View>
+            <View style={{ justifyContent: 'center', flexDirection: 'row', alignItems: "center" }}>
                 <Text style={{ fontSize: 12, fontWeight: "400", color: "#262C41", textAlign: 'center', marginTop: 32 }}>Bạn
-                    chưa có tài khoản? <TouchableOpacity onPress={gotoLogin}><Text style={{ fontSize: 12, fontWeight: "700", color: "#4755D4" }}>Đăng ký</Text></TouchableOpacity></Text>
+                    chưa có tài khoản? </Text>
+                <TouchableOpacity onPress={gotoLogin}><Text style={{ fontSize: 12, fontWeight: "700", color: "#4755D4", marginTop: 30 }}>Đăng ký</Text></TouchableOpacity>
             </View>
         </SafeAreaView>
     )

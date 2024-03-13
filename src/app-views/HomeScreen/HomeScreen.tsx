@@ -1,14 +1,14 @@
-import {StackNavigationProps} from '@app-navigation/types';
+import { StackNavigationProps } from '@app-navigation/types';
 import * as React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
-import {Box, Container, Text, Content} from 'native-base';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import { Box, Container, Text, Content } from 'native-base';
 
-export interface HomeScreenProps {}
+export interface HomeScreenProps { }
 
-const HomeScreen: React.FC<StackNavigationProps<'HomeScreen'>> = ({}) => {
+const HomeScreen: React.FC<StackNavigationProps<'HomeScreen'>> = ({ }) => {
   return (
     <Container>
-      <Content style={{flex: 1, backgroundColor: 'red'}}></Content>
+
     </Container>
   );
 };

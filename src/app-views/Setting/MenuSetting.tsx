@@ -6,6 +6,7 @@ import { iconAccountSvg, iconBoxSvg, iconEvaluateSvg, iconExitSvg, iconLetterSvg
 import { useOnEventCallback } from "@app-helper/hooks";
 import { goBack, navigate } from "@app-navigation/navigation-services";
 import style_c from "@assets/styles/styles_c"
+import { ScrollView } from "react-native-gesture-handler";
 export interface MenuSettingProps { }
 const MenuSetting: React.FC<StackNavigationProps<'MenuSetting'>> = () => {
     const [modalVisible, setModalVisible] = useState(false);
@@ -21,7 +22,7 @@ const MenuSetting: React.FC<StackNavigationProps<'MenuSetting'>> = () => {
         goBack()
     )
     return (
-        <SafeAreaView>
+        <ScrollView>
             {/* <Modal
                 animationType="slide"
                 transparent={true}
@@ -94,7 +95,7 @@ const MenuSetting: React.FC<StackNavigationProps<'MenuSetting'>> = () => {
             <View style={{ marginLeft: 80, marginTop: -20 }}>
                 <Text style={{ ...style_c.font_text_14_400, color: "#B5B9C7" }}>support@legalzone.vn</Text>
             </View>
-        </SafeAreaView>
+        </ScrollView>
     )
 }
 export default MenuSetting;

@@ -1,6 +1,6 @@
 import FormInputBase from "@app-components/FromInputBase";
 import { useOnEventCallback } from "@app-helper/hooks";
-import { navigate } from "@app-navigation/navigation-services";
+import { navigate, replace } from "@app-navigation/navigation-services";
 import { StackNavigationProps } from "@app-navigation/types";
 import { iconBackSvg, iconEyeOffSvg, iconFBSvg, iconGGSvg } from "@app-uikits/icon-svg";
 import iconBack from "@assets/svg/iconBackSvg";
@@ -19,6 +19,8 @@ const Login: React.FC<StackNavigationProps<'Login'>> = () => {
         navigate('MenuSetting'));
     const goToForgetPassWord = useOnEventCallback(() =>
         navigate('ForgetPassword'));
+    const goToBottomBar = useOnEventCallback(() =>
+        replace('MainApp'));
     return (
         <SafeAreaView>
             <TouchableOpacity>
@@ -52,12 +54,13 @@ const Login: React.FC<StackNavigationProps<'Login'>> = () => {
                 <TouchableOpacity onPress={goToForgetPassWord}><Text style={styles.textForgetPass}>Quên mật khẩu ?</Text></TouchableOpacity>
             </View>
             {/* Button */}
-            <TouchableOpacity onPress={goToSetting} style={styles.buttonLogin}>
+            <TouchableOpacity onPress={goToBottomBar} style={styles.buttonLogin}>
                 <Text style={styles.textbuttonLogin}>Đăng nhập</Text>
             </TouchableOpacity>
             {/* Text bạn chưa có tài khoản */}
             <View style={styles.textForget}>
-                <Text>Bạn chưa có tài khoản? <TouchableOpacity onPress={gotoForm}><Text style={{ color: '#4262AE' }}>Đăng ký</Text></TouchableOpacity></Text>
+                <Text>Bạn chưa có tài khoản? </Text>
+                <TouchableOpacity onPress={gotoForm}><Text style={{ color: '#4262AE' }}>Đăng ký</Text></TouchableOpacity>
             </View>
             <View style={styles.textForget}>
                 <Text>---------------------------------------------------------------------------------</Text>
@@ -104,6 +107,8 @@ const styles = StyleSheet.create({
         color: '#4262AE'
     },
     textForget: {
+        justifyContent: 'center',
+        flexDirection: 'row',
         marginTop: 10,
         alignItems: 'center'
     },

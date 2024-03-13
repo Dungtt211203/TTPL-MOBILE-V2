@@ -8,8 +8,8 @@ import { Text, View, SafeAreaView, TouchableOpacity } from "react-native";
 import { SvgXml } from "react-native-svg";
 export interface SelectBusinessProps { }
 const SelectBusiness: React.FC<StackNavigationProps<'SelectBusiness'>> = () => {
-    const goToFormLogin = useOnEventCallback(() =>
-        navigate('FormLogin'));
+    const goToFormRegister = useOnEventCallback(() =>
+        navigate('FormRegister'));
     const goToBack = useOnEventCallback(() =>
         goBack()
     )
@@ -69,7 +69,7 @@ const SelectBusiness: React.FC<StackNavigationProps<'SelectBusiness'>> = () => {
                         style={{ fontWeight: "500", fontSize: 16, color: "#262C41", textAlign: "center", marginTop: 15 }}>Quay
                         lại</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={goToFormLogin} style={{ width: 159, height: 54, backgroundColor: "#4755D4", borderRadius: 40, marginLeft: 230, marginTop: -55 }}>
+                <TouchableOpacity onPress={goToFormRegister} style={{ width: 159, height: 54, backgroundColor: "#4755D4", borderRadius: 40, marginLeft: 230, marginTop: -55 }}>
                     <Text style={{ fontWeight: "500", fontSize: 16, color: "#FFFFFF", textAlign: "center", marginTop: 15 }}>Tiếp tục</Text>
                 </TouchableOpacity>
             </View>

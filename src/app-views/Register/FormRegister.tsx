@@ -7,8 +7,8 @@ import { iconBackSvg } from "@app-uikits/icon-svg";
 import React from "react";
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { SvgXml } from "react-native-svg";
-export interface FormLoginProps { }
-const FormLogin: React.FC<StackNavigationProps<'FormLogin'>> = () => {
+export interface FormRegisterProps { }
+const FormRegister: React.FC<StackNavigationProps<'FormRegister'>> = () => {
     const gotoBack = useOnEventCallback(() =>
         goBack()
     )
@@ -100,12 +100,13 @@ const FormLogin: React.FC<StackNavigationProps<'FormLogin'>> = () => {
                     tục, bạn đã đồng ý với <Text style={{ fontWeight: "400", fontSize: 16, color: "#4755D4" }}>Chính sách
                         bảo mật</Text> của chúng tôi</Text>
             </View>
-            <View>
-                <Text style={{ fontSize: 12, fontWeight: "400", color: "#262C41", textAlign: 'center', marginTop: 16 }}>Bạn đã có tài khoản? <TouchableOpacity onPress={gotoLogin}><Text style={{ fontSize: 12, fontWeight: "700", color: "#4755D4" }}>Đăng
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+                <Text style={{ fontSize: 12, fontWeight: "400", color: "#262C41", textAlign: 'center', marginTop: 16 }}>Bạn đã có tài khoản? </Text>
+                <TouchableOpacity onPress={gotoLogin}><Text style={{ fontSize: 12, fontWeight: "700", color: "#4755D4", marginTop: 15 }}>Đăng
                     nhập</Text>
-                </TouchableOpacity></Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
     )
 }
-export default FormLogin;
+export default FormRegister;
