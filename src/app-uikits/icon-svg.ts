@@ -51,4 +51,10 @@ export { default as iconTronXanhLaSvg } from '@assets/svg/iconTronXanhLa';
 export { default as iconRecordSvg } from '@assets/svg/iconRecord';
 export { default as iconXexitSvg } from '@assets/svg/iconXExit';
 export { default as iconMenuTabSvg } from '@assets/svg/iconMenuTab';
+export { default as iconLikeColorXanhSvg } from '@assets/svg/iconLikeColorXanh';
+export { default as iconLikeColorSvg } from '@assets/svg/iconLikeColor';
+export { default as iconDislikeSvg } from '@assets/svg/iconDislike';
+export { default as iconCommentSvg } from '@assets/svg/iconComment';
+export { default as iconShareeSvg } from '@assets/svg/iconSharee';
+
 

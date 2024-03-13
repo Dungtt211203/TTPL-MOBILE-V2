@@ -1,5 +1,5 @@
 import FormInputBase from "@app-components/FromInputBase";
-import { iconChatSvg, iconChatTBSvg, iconLND4040Svg, iconLNDBTSvg, iconMenuTabSvg, iconNLHSvg, iconRecordSvg, iconSearchColorSvg, iconTBMesSvg, iconTronXanhSvg, iconXexitSvg } from "@app-uikits/icon-svg";
+import { iconCommentSvg, iconDislikeSvg, iconLND4040Svg, iconLikeColorSvg, iconLikeColorXanhSvg, iconMenuTabSvg, iconRecordSvg, iconSearchColorSvg, iconShareeSvg, iconTBMesSvg, iconXexitSvg } from "@app-uikits/icon-svg";
 import iconTBMes from "@assets/svg/iconTBMes";
 import React, { useState } from "react";
 import { Text, View, TouchableOpacity, SafeAreaView, TextInput, Image } from "react-native";
@@ -8,6 +8,18 @@ import styles_c from "@assets/styles/styles_c";
 import { ScrollView } from "react-native-gesture-handler";
 
 const HomePageArticle = () => {
+    const [likePressed, setLikePressed] = useState(false);
+
+    const handleLikePress = () => {
+        setLikePressed(true);
+        // Thực hiện các hành động khác khi like được nhấn
+        console.log("Like thành công")
+    };
+    const handleDislikePress = () => {
+        setLikePressed(false);
+        // Thực hiện các hành động khác khi dislike được nhấn
+        console.log("Dislike thành công");
+    };
     return (
         <ScrollView>
             <View style={{ flexDirection: "row" }}>
@@ -53,6 +65,36 @@ const HomePageArticle = () => {
                     <Text style={{ ...styles_c.font_text_14_600, color: "#262C41" }}>MỘT SỐ VẤN ĐỀ PHÁP LÝ về sáng chế liên quan đến Chương trình máy tính</Text>
                     <Text style={{ ...styles_c.font_text_12_400, color: "#686E7E" }}>Hiện nay, hệ thống pháp luật Việt Nam và các nước trên thế giới đều bảo hộ quyền tác giả (QTG) cho CTMT vì quyền tác giả bảo vệ những yếu tố bằng chữ ký tự của các mã CTMT</Text>
                 </View>
+            </View>
+            <View style={{ flexDirection: "row" }}>
+                {/* Comment Like Chia Sẻ */}
+                <View style={{ flexDirection: "row" }}>
+                    <SvgXml xml={iconLikeColorXanhSvg()} style={{ marginLeft: 16 }} />
+                    <Text style={{ marginLeft: 5 }}>120</Text>
+                </View>
+                <View style={{ flexDirection: "row", marginLeft: 180 }}>
+                    <Text>123 lượt xem</Text>
+                    {""}
+                    <Text>5 bình luận</Text>
+                </View>
+            </View>
+            <View style={{ flexDirection: "row" }}>
+                <TouchableOpacity style={{ flexDirection: "row", marginLeft: 10 }} onPress={handleLikePress}>
+                    <SvgXml xml={iconLikeColorSvg()} style={{ marginLeft: 16, marginTop: 16 }} />
+                    <Text style={{ ...styles_c.font_text_14_400, marginTop: 16, marginLeft: 9, color: "#4755D4" }}>Like</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ flexDirection: "row", marginLeft: 10 }} onPress={handleDislikePress}>
+                    <SvgXml xml={iconDislikeSvg()} style={{ marginTop: 16, marginLeft: 16 }} />
+                    <Text style={{ ...styles_c.font_text_14_400, marginTop: 16, marginLeft: 9 }}>Dislike</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ flexDirection: "row", marginLeft: 10 }}>
+                    <SvgXml xml={iconCommentSvg()} style={{ marginTop: 16, marginLeft: 16 }} />
+                    <Text style={{ ...styles_c.font_text_14_400, marginTop: 16, marginLeft: 9 }}>Comment</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ flexDirection: "row", marginLeft: 10 }}>
+                    <SvgXml xml={iconShareeSvg()} style={{ marginTop: 16, marginLeft: 16 }} />
+                    <Text style={{ ...styles_c.font_text_14_400, marginTop: 16, marginLeft: 9 }}>Share</Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
     )
